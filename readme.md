@@ -21,7 +21,7 @@ npm install -g snarkjs
 ## compile circuit
 
 ```bash
-circom multiplier2.circom --r1cs --wasm --sym --c
+circom circuits/multiplier2.circom --r1cs --wasm --sym
 ```
 
 ## generate witness
@@ -66,8 +66,18 @@ snarkjs groth16 verify verification_key.json public.json proof.json
 snarkjs zkey export solidityverifier multiplier2_0001.zkey verifier.sol
 ```
 
-To facilitate the call, you can use snarkJS to generate the parameters of the call by typing:
+- To facilitate the call, you can use snarkJS to generate the parameters of the call by typing:
 
 ```bash
 snarkjs generatecall
 ```
+
+
+
+
+
+## change inputs
+
+- generate witness
+- generate proof
+- verify proof
